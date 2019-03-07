@@ -1,0 +1,14 @@
+{
+    "name": "wenrouzei/laravel-hasher",
+    "description": "hasher support in laravel",
+    "type": "library",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "wenrouzei",
+            "email": "wenrouzei@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

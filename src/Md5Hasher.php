@@ -11,13 +11,26 @@ namespace Wenrouzei\Hasher;
 
 class Md5Hasher implements HasherInterface
 {
-    public function make()
+    /**
+     * @param string $value
+     * @param array $options
+     * @return string
+     */
+    public function make($value, array $options = [])
     {
-        
+        $salt = $options['salt'] ?? '';
+        return hash('md5', $value . $salt);
     }
 
-    public function check()
+    /**
+     * @param string $value
+     * @param $hashedValue
+     * @param array $options
+     * @return bool
+     */
+    public function check($value, $hashedValue, array $options = [])
     {
-
+        $salt = $options['salt'] ?? '';
+        return hash('md5', $value . $salt) == $hashedValue;
     }
 }

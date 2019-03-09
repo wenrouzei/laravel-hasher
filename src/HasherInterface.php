@@ -11,7 +11,7 @@ namespace Wenrouzei\Hasher;
 
 interface HasherInterface
 {
-    public function make();
+    public function make($value, array $options = []);
 
-    public function check();
+    public function check($value, $hashedValue, array $options = []);
 }
